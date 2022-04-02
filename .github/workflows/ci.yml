@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd openweather-exporter
-          go mod download
+          go mod vendor
           cd -
       - name: Run GoReleaser Build
         uses: goreleaser/goreleaser-action@v2
