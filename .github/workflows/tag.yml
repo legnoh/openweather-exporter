@@ -22,8 +22,8 @@ jobs:
           echo "main_tag=\"$(git describe --tags)\"" >> $GITHUB_ENV
       - name: Check Submodule Tag version
         run:
-          cd openweather-exporter
-          echo "submodule_tag=\"$(git describe --tags)\"" >> $GITHUB_ENV
+          cd openweather-exporter;
+          echo "submodule_tag=\"$(git describe --tags)\"" >> $GITHUB_ENV;
           cd -
       - name: Tagging
         if: ${{ startsWith( env.main_tag, env.submodule_tag ) == false }}
