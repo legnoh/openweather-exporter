@@ -1,4 +1,4 @@
 FROM gcr.io/distroless/static
 
-COPY openweather-exporter/app /
+COPY dist/openweather-exporter_linux_arm_7/app /
 ENTRYPOINT ["/app"]

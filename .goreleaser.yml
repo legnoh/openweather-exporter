@@ -1,11 +1,6 @@
-# This is an example .goreleaser.yml file with some sensible defaults.
-# Make sure to check the documentation at https://goreleaser.com
-before:
-  hooks:
-    - go version
-    - go mod vendor
 builds:
   - dir: openweather-exporter
+    main: .
     env:
       - GO111MODULE=on
       - CGO_ENABLED=0
@@ -32,7 +27,7 @@ dockers:
     image_templates:
     - "legnoh/openweather-exporter:latest"
     - "legnoh/openweather-exporter:{{ .Tag }}"
-    dockerfile: ../Dockerfile.goreleaser
+    dockerfile: Dockerfile.goreleaser
     build_flag_templates:
     - "--pull"
     - "--platform=linux/arm/v7"
