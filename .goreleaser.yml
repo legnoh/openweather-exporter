@@ -1,6 +1,5 @@
 builds:
   - dir: openweather-exporter
-    main: .
     env:
       - GO111MODULE=on
       - CGO_ENABLED=0
