@@ -27,7 +27,7 @@ jobs:
           cd -
       - name: Tagging
         if: ${{ startsWith( env.main_tag, env.submodule_tag ) == false }}
-        uses: anothrNick/github-tag-action@1.36.0
+        uses: anothrNick/github-tag-action@1.38.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_TAG: ${{ env.submodule_tag }}
